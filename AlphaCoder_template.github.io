@@ -108,21 +108,105 @@ footer{
 	width:100%;
 	height:inherit;
 	float:left;
-	background-color:#b5651d;
+	background-color:grey;
 	border-radius: 6px;
 	margin-top:2%;
 	margin-bottom:6%;
-	color:#f5efe1;
+	color:black;
 	text-align:center;
 	font-size:15px;
+}
+
+.search_bar {
+	overflow: hidden;
+	background-color: #e9e9e9;
+}
+
+.search_bar a {
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.search_bar a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.search_bar a.active {
+	background-color: #2196F3;
+	color: white;
+}
+
+.search_bar .search-container {
+	float: right;
+}
+
+.search_bar input[type=text] {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
+}
+
+.search_bar .search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #ddd;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+}
+
+.search_bar .search-container button:hover {
+	background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+	.search_bar .search-container {
+		float: none;
+	}
+	.search_bar a, .search_bar input[type=text], .search_bar .search-container button {
+		float: none;
+		display: block;
+		text-align: left;
+		width: 100%;
+		margin: 0;
+		padding: 14px;
+	}
+	.search_bar input[type=text] {
+		border: 1px solid #ccc;
+	}
 }
 
 
 /*body container*/
 
+
 </style>
 
 <body>
+	
+	</head>
+	<body>
+		
+	<div class="search_bar">
+	  <a href="#home">Home</a>
+	  <a href="#about">About</a>
+	  <a href="#contact">Contact</a>
+	  <div class="search-container">
+	    <form action="/action_page.php">
+	      <input type="text" placeholder="Search.." name="search">
+	      <button type="submit"><i class="fa fa-search"></i></button>
+	    </form>
+	  </div>
+	</div>
 	<div id="container">
 		<header>
 			<div class="topnav">
@@ -156,9 +240,11 @@ footer{
 		</main>
 
 
-		<footer>
-				<b> Footer </b>
-
+		<footer class= "c-footer">
+			<p>
+				© 2020 CDU Anime Club  --  Site for educational and entertainment use only
+			</p>
 		</footer>
+
 	</body>
 </html>
